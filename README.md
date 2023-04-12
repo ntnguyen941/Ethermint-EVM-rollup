@@ -7,24 +7,26 @@ Install Golang
 1/ Cập nhật phiên bản mới:
 
 sudo apt update && sudo apt upgrade -y
+
 2/ Bổ sung package cần thiết:
 
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y
+
 3/ Cài đặt Golang:
 
-ver="1.19.1" 
-cd $HOME 
-wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" 
+- ver="1.19.1" 
+- cd $HOME 
+- wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" 
 
 
-sudo rm -rf /usr/local/go 
-sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" 
-rm "go$ver.linux-amd64.tar.gz"
+- sudo rm -rf /usr/local/go 
+- sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" 
+- rm "go$ver.linux-amd64.tar.gz"
 
 Chuyển thư mục Golang:
 
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
-source $HOME/.bash_profile
+- echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+- source $HOME/.bash_profile
 
 Kiểm tra phiên bản:
 go version
@@ -42,6 +44,7 @@ make build
 make install 
 
 make cel-key
+
 5/ Cài đặt mạng:
 
 celestia light init --p2p.network blockspacerace
